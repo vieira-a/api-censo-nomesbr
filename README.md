@@ -15,10 +15,10 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
     - [x] Utilizar a biblioteca Chart.js para renderizar um gráfico "modelo";
     - [x] Simular montagem de dados no gráfico utilizando um objeto JavaScript data = {"chave":valor};
 
-- [ ] Captura e tratamento dos dados
+- [x] Captura e tratamento dos dados
 
-    - [ ] Acessar e obter retorno da API com JavaScript passando um nome como parâmetro;
-    - [ ] Criar um novo objeto com chave/valor (década/quantidade) apenas com os dados obtidos da pesquisa para a montagem e exibição das saídas. Exemplo:
+    - [x] Acessar e obter retorno da API com JavaScript passando um nome como parâmetro;
+    - [x] Criar um novo objeto com chave/valor (década/quantidade) apenas com os dados obtidos da pesquisa para a montagem e exibição das saídas. Exemplo:
     
     nome = {
     "1930":1390,
@@ -27,9 +27,9 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
 
 - [ ] Exibição das informações
 
-    - [ ] Criar componente de gráfico para exibir informações.
+    - [x] Criar componente de gráfico para exibir informações.
 
-        - [ ] Total por década;
+        - [x] Total por década;
 
     - [ ] Criar cards abaixo do gráfico para exibir informações adicionais:
 
