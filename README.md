@@ -28,8 +28,20 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
 - [ ] Exibição das informações
 
     - [ ] Exibir informações no HTML inicialmente;
+
+        - [ ] Total por década;
+        - [ ] Média de frequência
+        - [ ] Década de maior frequência
+
     - [ ] Criar componente de gráfico para exibir informações.
 
+        - [ ] Total por década;
+
+    - [ ] Criar cards abaixo do gráfico para exibir informações adicionais:
+    
+        - [ ] Total por década;
+        - [ ] Média de frequência
+        - [ ] Década de maior frequência
 ### HTML
 
 - [ ] Criar estrutura base para recebimento das informações;
