@@ -27,21 +27,16 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
 
 - [ ] Exibição das informações
 
-    - [ ] Exibir informações no HTML inicialmente;
-
-        - [ ] Total por década;
-        - [ ] Média de frequência
-        - [ ] Década de maior frequência
-
     - [ ] Criar componente de gráfico para exibir informações.
 
         - [ ] Total por década;
 
     - [ ] Criar cards abaixo do gráfico para exibir informações adicionais:
-    
+
         - [ ] Total por década;
         - [ ] Média de frequência
         - [ ] Década de maior frequência
+        - [ ] Taxa de crescimento em relação à última década
 ### HTML
 
 - [ ] Criar estrutura base para recebimento das informações;
@@ -49,3 +44,5 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
 ### CSS
 
 - [ ] Criar layout responsivo para exibição amigável.
+
+[Exemplo de layout para o gráfico](https://dribbble.com/shots/17238059-Dashboard-Cards-Light-Dark)
