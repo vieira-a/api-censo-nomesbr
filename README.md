@@ -39,7 +39,7 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
         - [ ] Taxa de crescimento em relação à última década
 ### HTML
 
-- [ ] Criar estrutura base para recebimento das informações;
+- [x] Criar estrutura base para recebimento das informações;
 
 ### CSS
 
