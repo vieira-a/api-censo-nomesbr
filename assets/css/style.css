@@ -13,6 +13,8 @@ body {
     height: 100vh;
     font-family: 'Nunito', sans-serif;
     overflow: hidden;
+
+    background-color: var(--bg-gray-light);
 }
 
 h2 {
@@ -32,11 +34,11 @@ p {
 }
 
 main {
+    margin-inline: auto;
     width: 37.5rem;
 }
 .wrapper {
-    margin-top: 2rem;
-    margin-inline: 2rem ;
+    margin-top: 1rem;
     padding: 1rem 1.5rem;
     background-color: var(--bg-gray-light);
     border-radius: 0.5rem;

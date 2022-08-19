@@ -1,24 +1,57 @@
-/**
- * Variáveis iniciais
- */
+//DOM variables
+const frequencyNameTotal = document.querySelector("#total-frequency");
 
-let myName = "JAMILE"
+const frequencyNameAvg = document.querySelector("#avg-frequency");
 
+const frequencyNameLarger = document.querySelector("#larger-frequency");
+
+const frequencyNameGrow = document.querySelector("#grow-frequency");
+
+//Input variables
+let myName = "LARISSA"
+
+//API variable
 const url = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${myName}`
 
+let frequency = []
+
+let totalFrequency = 0;
+
 async function getMyName() {
+
     const response = await fetch(url)
     
     let dataJson = await response.json()
     
-    dataJson = dataJson[0].res // apenas o campo período
-    console.log(dataJson)
+    dataJson = dataJson[0].res
     
-    // dataJson.map((name) => {
-    //     let decade = name.periodo.replaceAll("[", "").replace(",", "-")
-    //     frequency = name.frequencia
-    // }) 
+    dataJson.map((name) => {
 
+        let decade = name.periodo.replaceAll("[", "").replace(",", "-");
+        
+        frequency.push(name.frequencia)        
+    }) 
+
+    //Get total frequency
+    for(let i = 0; i < frequency.length; i++) {
+        totalFrequency += frequency[i];
+    }
+
+    //Get max frequency
+    let maxFrequency = frequency.reduce(function(prev, current) {
+        return prev > current ? prev : current;
+    });
+    
+    console.log(maxFrequency)
+
+    //DOM manipulation
+    let frequencyLenth = frequency.length
+    let frequencyAvg = totalFrequency / frequencyLenth
+
+    frequencyNameTotal.innerHTML = totalFrequency
+    frequencyNameAvg.innerHTML = frequencyAvg.toFixed(0)
+
+    //ChartJS creation
     let myChart = new Chart(document.getElementById("my-chart"), {
         type: 'line',
         data: {
@@ -54,8 +87,9 @@ async function getMyName() {
             }
         } 
     })
+}
 
-        }
+console.log(frequency)
 
 
 getMyName()

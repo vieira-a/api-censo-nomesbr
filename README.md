@@ -31,10 +31,11 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
 
         - [x] Total por década;
 
-    - [ ] Criar cards abaixo do gráfico para exibir informações adicionais:
+    - [x] Criar cards abaixo do gráfico para exibir informações adicionais:
 
-        - [ ] Total por década;
-        - [ ] Média de frequência
+        - [x] Total por década;
+        - [x] Média de frequência
+        - [x] Valor da maior frequência
         - [ ] Década de maior frequência
         - [ ] Taxa de crescimento em relação à última década
 ### HTML
