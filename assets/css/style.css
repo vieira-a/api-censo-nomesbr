@@ -14,10 +14,9 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 800px;
     font-family: 'Nunito', sans-serif;
     color: var(--bg-gray-dark);
-    overflow: hidden;
 
     background-color: var(--bg-gray-light);
 }
@@ -58,16 +57,16 @@ header {
     text-align: center;
     width: 90%;
     margin-inline: auto;
-    margin-block: 2rem;
+    margin-block: 1rem;
 }
 
 main {
     margin-inline: auto;
-    width: 37.5rem;
+    
 }
 .wrapper {
     margin-top: 1rem;
-    padding: 1rem 1.5rem;
+    padding: .5rem;
     background-color: var(--bg-gray-light);
     border-radius: 0.2rem;
 }
@@ -135,16 +134,20 @@ canvas {
 }
 
 #rules {
-    padding-block: 2rem;
+    padding-top: 2rem;
     font-size: .8rem;
 }
 
-#rules h4 {
+#rules p {
     font-size: .8rem;
 }
 
 footer {
     text-align: center;
-    font-size: 1rem;
     font-weight: bold;
+    margin-block: 1rem;
+}
+
+footer p {
+    font-size: .8rem;
 }
