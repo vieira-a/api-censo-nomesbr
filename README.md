@@ -25,7 +25,7 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
     "1940":1560
     }
 
-- [ ] Exibição das informações
+- [x] Exibição das informações
 
     - [x] Criar componente de gráfico para exibir informações.
 
@@ -35,15 +35,18 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
 
         - [x] Total por década;
         - [x] Média de frequência
-        - [x] Valor da maior frequência
-        - [ ] Década de maior frequência
-        - [ ] Taxa de crescimento em relação à última década
+        
 ### HTML
 
 - [x] Criar estrutura base para recebimento das informações;
 
 ### CSS
 
-- [ ] Criar layout responsivo para exibição amigável.
+- [x] Criar layout responsivo para exibição amigável.
 
-[Exemplo de layout para o gráfico](https://dribbble.com/shots/17238059-Dashboard-Cards-Light-Dark)
+[Inspiração de layout para o gráfico](https://dribbble.com/shots/17238059-Dashboard-Cards-Light-Dark)
+
+## Prazos
+
+- Início do projeto: 18/08/2022
+- Final do projeto: 18/08/2022

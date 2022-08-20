@@ -1,38 +1,42 @@
-//DOM variables
 const frequencyNameTotal = document.querySelector("#total-frequency");
 
 const frequencyNameAvg = document.querySelector("#avg-frequency");
-
-const frequencyNameLarger = document.querySelector("#larger-frequency");
-
-const frequencyNameGrow = document.querySelector("#grow-frequency");
-
-//Input variables
-let myName = "LARISSA"
-
-//API variable
-const url = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${myName}`
 
 let frequency = []
 
 let totalFrequency = 0;
 
-async function getMyName() {
+let objectData = {}
+
+let myChart = null
+
+document.querySelector('#inputName').addEventListener('change', async function () {
+
+    myName = (document.querySelector('#inputName').value)
+    
+    url = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${myName}`
 
     const response = await fetch(url)
     
     let dataJson = await response.json()
     
     dataJson = dataJson[0].res
-    
+
     dataJson.map((name) => {
 
-        let decade = name.periodo.replaceAll("[", "").replace(",", "-");
+        let dataDecade = name.periodo.replaceAll("[", "").replace(",", "-");
+        let dataFrequency = name.frequencia
         
+        //Create new object
+        objectData = Object.assign({"Decada": dataDecade, "Frequencia": dataFrequency})
+
+        //Criar um for aqui
+        let objectDataValues = Object.values(objectData)[1]
+        let objectDataKeys = Object.values(objectData)[0]
+
         frequency.push(name.frequencia)        
     }) 
 
-    //Get total frequency
     for(let i = 0; i < frequency.length; i++) {
         totalFrequency += frequency[i];
     }
@@ -41,8 +45,6 @@ async function getMyName() {
     let maxFrequency = frequency.reduce(function(prev, current) {
         return prev > current ? prev : current;
     });
-    
-    console.log(maxFrequency)
 
     //DOM manipulation
     let frequencyLenth = frequency.length
@@ -50,13 +52,12 @@ async function getMyName() {
 
     frequencyNameTotal.innerHTML = totalFrequency
     frequencyNameAvg.innerHTML = frequencyAvg.toFixed(0)
-
-    //ChartJS creation
-    let myChart = new Chart(document.getElementById("my-chart"), {
+    
+    myChart = new Chart(document.getElementById("my-chart"), {
         type: 'line',
         data: {
             datasets: [{
-                label: `Frequência do nome ${myName}`,
+                label: "Frequência",
                 data: {
                     "1930": dataJson[1].frequencia,
                     "1940": dataJson[2].frequencia,
@@ -67,8 +68,8 @@ async function getMyName() {
                     "1990": dataJson[7].frequencia,
                     "2000": dataJson[8].frequencia
             },
-            backgroundColor: ['rgba(255, 99, 132, 0.2)'],
-            borderColor: ['rgba(255,99,132,1)'],
+            backgroundColor: ['rgb(193, 212, 251)'],
+            borderColor: ['rgb(193,212,251)'],
             borderWidth: 1
             }],
             options: {
@@ -87,9 +88,10 @@ async function getMyName() {
             }
         } 
     })
+
+    }
+)
+
+function cleanChart(){
+    window.location.reload()
 }
-
-console.log(frequency)
-
-
-getMyName()
