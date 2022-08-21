@@ -49,8 +49,4 @@ Aplicação que consulta a API do IBGE que contém informações de senso anteri
 ## Prazos
 
 - Início do projeto: 18/08/2022
-<<<<<<< HEAD
 - Final do projeto: 20/08/2022
-=======
-- Final do projeto: 20/08/2022
->>>>>>> 4c26f59ed0ee788ec6e136afe968d8e24ded896f
